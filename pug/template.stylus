@@ -3,3 +3,6 @@
   
 body 
   padding-top 20px
+  
+.enter-atas
+  padding-top 10px
