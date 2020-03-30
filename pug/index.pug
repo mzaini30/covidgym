@@ -1,0 +1,14 @@
+extends template.pug
+
+block isi
+  center
+    h1 Covid Gym
+    hr
+  blockquote
+    p Selama #diRumahAja, tetap harus olahraga dong...
+  p Jadi, olahraganya tu bebas; bisa push up, sit up, scout jump, atau apapun lainnya terserah. Okay?
+  p Cara mainnya, kamu olahraga sebanyak selisih jumlah positif Corona hari ini dan kemarin. Yaitu sebanyak #[strong.selisih 0] kali. Karena, kemarin yang positif Corona adalah sebanyak #[em.kemarin 0] orang (di Indonesia). Dan kemarin lusa ada #[em.kemarin-lusa 0] orang.
+  p Nggak mau banyak olahraga? Ya, makanya di rumah aja supaya korbannya nggak nambah lagi.
+  
+block js
+  include:uglify-js:babel(presets=["env"]) index.js
