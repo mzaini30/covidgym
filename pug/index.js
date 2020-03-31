@@ -14,10 +14,7 @@ $.get(`https://covid19.mathdro.id/api/daily/${kemarin_lusa}`, data => {
   }
 })
 
-var berulang = 0
-var interval = setInterval(() => {
-  berulang++
-  berulang == 10 ? clearInterval(interval) : ""
+setInterval(() => {
   $(".selisih").html((Number($(".kemarin").html().replace(/\./g, "")) - Number($(".kemarin-lusa").html().replace(/\./g, ""))).toLocaleString("id"))
 }, 1000)
 
